@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+</head>
+<body>
+    <main class="main">
+            <header class="head">
+                <div class="logo-main">
+                     <p class="txt">logo to be insert</p>
+                </div>
+               <div class="list-container">
+                <div class="nav-bar">
+                    <ul><a href="" class="home"><i class="fa-solid  fa-house fa-sm"></i> Home </i></a></ul>
+                   <!-- <ul><a href="" class="services">Services</a></ul>
+                   <ul><a href="" class="contact">Contact us</a></ul>
+                   <ul><a href="" class="about">about us</a></ul> -->
+                   
+               </div>
+               </div>
+                <div class="logo-head">
+                    <p style="font-size: 50px; font-style: italic; color: white;"><span id="astro-a">S</span>agar<span id="tech-t">P</span>ath` <span style="font-size: 30px;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;"> Lab service</span></p> <br>
+                    <p>We deliver service , at your door step <i class="fa fa-thumbs-up fa-xl"></i></p>
+                </div>
+                <div class="btn-btn">
+                    <button class="btn-btn-1"><i class="fa fa-user"></i> Sign in </button>
+                    <button class="btn-btn-2"><i class="fa fa-id-card"></i> Sign up</button>
+                </div>
+
+                
+            </header>
+           
+                                       <!-- about section start -->
+
+                                                   <div class="about-div">
+                                                         <p>Book Your Test Now</p>
+                                             <!--             <p id="btn-alertmsg" ></p>           -->
+                                                         
+                                        <!--              <div th:if="${session.alertmsg}"  
+                                                                 th:classappend = "${session.alertmsg}" >
+                                                         <p th:text= "${session.alertmsg}" > </p>
+                                                         <th:block th:text = "${#session.removeAttribute('alertmsg')}"></th:block>
+                                                         </div>   
+                                                 -->       
+                                                         
+                                                         <form th:action="@{/booking}"  th:object="${user}"  method="post" id="form">
+                                                            <label for="name">Full Name </label>
+                                                            <input type="text" name="name" id="name" placeholder="full name">
+                                                            <label for="mobile">Mob Number </label>
+                                                            <input type="number" name="mo_number" id="number" placeholder="enter your mobile number">
+                                                            
+                                                            <label for="location">Select Location  </label>
+                                                            <div class="search-icon">
+                                                                <i class="fa-sharp fa-solid fa-map-location-dot"></i> 
+                                                                <input type="text" name="map-input" id="map-input" placeholder="search your location" >
+                                                                <div class="icon-pencil">
+                                                                    <i class="fa fa-pencil">  </i>
+                                                                    <!-- <i class="fa-regular fa-circle fa-xl"></i> -->
+                                                                </div>
+                                                                  <i class="fa fa-search fa-sm"></i> 
+                                                            </div>
+
+                                                            <select name="address" id="address">
+                                                              <option value="Kalonda">Kalonda</option>
+                                                              <option value="Chholas">Chholas</option>
+                                                              <option value="Jarcha">Jarcha</option>
+                                                              <option value="Gesupur">Gesupur</option>
+                                                            </select>
+
+                                                            <label for="gender">Gender  </label>
+                                                            <select name="gender" id="gender">
+                                                                <option value="male"> Male </option>
+                                                                <option value="female">Female</option>
+                                                                <option value="other">Others</option>
+
+                                                            </select>
+                                                            <label for="dob">Date of birth </label>
+                                                            <input type="date"  name="dob"  id="dob">
+
+                                                            <button id="btn-submit" type="submit"  >Book test</button>
+
+                                                         </form>
+                                                   </div>
+
+                                       <!-- about ends here -->
+                                       
+            <footer class="owner-info">
+                <div class="design-by">
+                    <p>Site maintained by -</p>
+                </div>
+                <div class="dev">
+                   <p>AstroTech Developers</p>
+                   <div class="font-awsome">
+                    <i class="fa fa-whatsapp"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-linkedin"></i>
+                   </div>
+                 
+                </div>
+                <div class="copy">
+                    <p><span id="copy-sign">&#169;</span>Copyrights to SagarPathLab, all rights reserved to <a id="domain" href="" style="color: rgb(137, 151, 137);">sagarpathlab.in&#8482;</a> ,digital service by <strong>astrotech.org</strong> </p>
+                </div>
+            </footer>
+    </main>
+
+
+
+    <script src="https://kit.fontawesome.com/b5b1a9bf9d.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
