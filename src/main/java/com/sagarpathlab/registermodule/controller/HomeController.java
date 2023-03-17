@@ -17,10 +17,8 @@ import com.sagarpathlab.registermodule.repository.CustomerRepository;
 import jakarta.servlet.http.HttpSession;
 
 
+
 @Controller
-@CrossOrigin("http://localhost:3000")
-@RestController
-@RequestMapping("/api/v1/customers")
 public class HomeController {
 	@Autowired
 	private CustomerRepository custRepo;
@@ -41,9 +39,9 @@ public class HomeController {
 	}
 //	code start for  fetching data from reactui
 	
-	@GetMapping
-	public List<CustomerDetails> getCustomerDetails(){
-		return custRepo.findAll();
-	}
+//	@GetMapping
+//	public List<CustomerDetails> getCustomerDetails(){
+//		return custRepo.findAll();
+//	}
 	
 }
